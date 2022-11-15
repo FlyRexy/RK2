@@ -1,0 +1,25 @@
+<div class = 'container'>
+  <div class = "row" style="padding-top: 30px">
+    <div class = "col-8">
+      <h3>Задание: Дан массив чисел arr_k. Определить максимальный элемент массива и поместить на место первого положительного элемента, не кратного 7</h3>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = 'col-3'>
+      <%= form_with url: "home/result", :method => "get" do |form| %>
+        <%= form.label "Input elements" %>
+        <%= form.text_field :input,value: "7 -3 -30 4 -5 -1 18 2", size: "15x1", class: "form-control form-control-dark text-bg-dark" %>
+        <br>
+        <%= form.submit "RESULT", class: "btn btn-outline-dark me-2" %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+<div style = "padding-top: 15px">
+  <% flash.each do |_type, msg| %>
+    <div class="alert alert-info">
+      <%= msg %>
+    </div>
+  <% end %>
+</div>

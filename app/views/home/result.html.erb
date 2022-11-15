@@ -1,0 +1,10 @@
+<div style = "padding: 20px">
+  <p>Исходный массив</p>
+  <p><%= @original_array.split.map(&:to_f).join(" | ") %></p>
+  <p>Новый массив</p>
+  <p><%= @array.map(&:to_f).join(" | ") %></p>
+
+  <p>Максимальный элемент:</p>
+  <p><%= @array.max %></p>
+  <%= link_to "Вернуться назад", root_path %>
+</div>
